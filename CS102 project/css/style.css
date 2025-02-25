@@ -7,6 +7,7 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 body{
@@ -18,16 +19,38 @@ body{
     width: 95%;
     margin: 0 auto;
 }
-/* topbar and navbar */
+
+/* topbar, title, navbar */
+.title{
+    display: block;
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+.title a{
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 10px;
+    transition: 0.2s ease;
+}
+
+.title a:hover{
+    text-shadow: 4px 2px 2px #70ff66;
+}
+
 .topbar{
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    border-bottom: 3px solid #70ff66;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 10px 7px 10px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #70ff66;
+    box-shadow: 0 -3px 10px;
 }
 
 .navbar{
-    float: right;
-    
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar a{
@@ -78,7 +101,7 @@ body{
 
 .topicbox a{
     color: #000000;
-    font-weight: 600;
+    font-weight: 800;
     text-decoration: none;
 }
 
@@ -94,6 +117,103 @@ body{
     border-radius: 3px;
 }
 
-.shoutbox{
-    
+.shoutbox ul{
+    list-style: none;
 }
+
+/* hypens for each list element */
+.shoutbox ul li::before{
+    display: inline-block;
+    content: "-";
+    width: 1em;
+    margin-left: -2em;
+}
+
+/* footer */
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 200px;
+    padding: 10px 10px 7px 10px;
+    margin-top: 100px;
+    border-top: 2px solid #70ff66;
+    box-shadow: 0 3px 10px;
+}
+
+/* match-ups page */
+
+#matchupwrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* matchup grid */
+#matchupgrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px 3%;
+}
+
+.matchupbox{
+    display: flex;
+    background-color: #ffffa0;
+    margin: auto 0;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.matchupbox a{
+    color: #000000;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.matchupbox img{
+    width: 100%;
+}
+
+/* Medium screen */
+@media(max-width: 1300px){
+
+/* Phone screen */
+    @media(max-width: 850px){
+
+        /* Home page */
+        #maingrid{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3%;
+            font-size: 0.9em;
+        }
+
+        .topics{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .topicbox{
+            display: flex;
+            background-color: #ffffa0;
+            margin: auto 0;
+            text-align: center;
+            border-radius: 3px;
+        }
+    
+        /* Matchup page */
+        #matchupwrapper{
+            width: 90%;
+        margin: 0 auto;
+        }
+
+        #matchupgrid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px 2%;
+            font-size: 0.85em;
+        }
+
+    }
+
+}
+
