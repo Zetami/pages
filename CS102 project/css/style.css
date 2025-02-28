@@ -87,6 +87,16 @@ body{
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
 }
 
+.topicsDropdown ul li a{
+    background-color: #ffc53d;
+    border-color: #ffffa0;
+}
+
+.topicsDropdown ul li a:hover{
+    background-color: #ffc53d;
+    border-color: #ffffa0;
+}
+
 .navbar a{
     text-decoration: none;
     text-align: center;
