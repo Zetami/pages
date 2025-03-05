@@ -247,17 +247,33 @@ footer{
             display: none;
         }
 
-        /* Hamburger */      
-        .hamburger{
+        /* Hamburger */     
+        .hideburger{
+            display: none;
+        }
+        
+        #hamburger{
             display: block;
             padding: 6px 12px;
             font-size: 18px;
             transition: 0.3s ease;
+            background-color: #ffffa0;
+            border: 1px solid #ffc53d;
+            border-radius: 5px;
+            box-shadow: 0 0 4px rgba(0, 0 , 0, 0.3);
+            transition: 0.1s ease;
+            cursor: pointer;
+        }
+
+        #hamburger:hover {
+            background-color: #ffc53d;
+            border-color: #ffffa0;
+            box-shadow: 0 0 4px rgba(0, 0 , 0, 1);
         }
 
         .mnavbar{
             position: absolute;
-            top: 70px;
+            top: 68px;
             left: 0;
             right: 0;
             text-align: center;
