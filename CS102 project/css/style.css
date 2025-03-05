@@ -119,6 +119,11 @@ body{
     box-shadow: 0 0 4px rgba(0, 0 , 0, 1);
 }
 
+/* hamburger */
+.hamburger{
+    display: none;
+}
+
 /* home page grid */
 #maingrid{
     display: grid;
@@ -236,12 +241,37 @@ footer{
 @media(max-width: 1300px){
 
 /* Phone screen */
-    @media(max-width: 850px){
+    @media(max-width: 750px){
+
+        .navbar{
+            display: none;
+        }
 
         /* Hamburger */
-        .navbar{
+        .mobilenav label{
+            padding: 5px 12px;
+            font-size: 28px;
+            transition: 0.3s ease;
+        }
+
+        .mobilenav label:hover{
             
         }
+
+        .mobilenav .mnavbar{
+            /* display: none; */
+        }
+
+        .mobilenav input[type=checkbox]:checked ~ .mnavbar{
+            display: block;
+        }
+
+        .mnavbar ul {
+            
+        }
+
+
+
 
         /* Home page */
         #maingrid{
