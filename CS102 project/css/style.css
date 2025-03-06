@@ -22,6 +22,14 @@ body{
     margin: 0 auto;
 }
 
+#hamburger{
+    display: none;
+}
+
+.mnavbar{
+    display: none;
+}
+
 /* topbar, title, navbar */
 .topbar{
     display: flex;
@@ -59,6 +67,10 @@ body{
 .navbar ul > li{
     display: flex;
     flex-direction: column;
+}
+
+#topics{
+    cursor: pointer;
 }
 
 .topicsDropdown ul{
@@ -243,6 +255,10 @@ footer{
 /* Phone screen */
     @media(max-width: 750px){
 
+        .mnavbar{
+            display: block;
+        }
+
         .navbar{
             display: none;
         }
@@ -252,6 +268,10 @@ footer{
             display: none;
         }
         
+        .hidetopics{
+            display: none;
+        }
+
         #hamburger{
             display: block;
             padding: 6px 12px;
@@ -286,19 +306,25 @@ footer{
             padding: 0;
         }
 
-        .mtopicsDropdown{
-            
+        .mtopicsDropdown ul{
+            list-style: none;
+            padding: 0;
         }
 
-        .mtopicsDropdown > ul{
+        .mtopicsDrop{
             list-style: none;
             display: flex;
             flex-direction: column;
             padding: 0;
         }
 
-        .mnavbar li{
-            
+        #mtopics{
+            cursor: pointer;
+        }
+
+        .mtopicsClick{
+            background-color: #ffc53d;
+            text-shadow: 2px 2px 2px #ffffa0;
         }
         
         .mnavbar a{
@@ -313,16 +339,9 @@ footer{
         }
 
         .mnavbar a:hover{
-            background-color: #ffc53d;
-            text-shadow: 2px 2px 2px #ffffa0;
+            background-color: #ffc53d !important;
+            text-shadow: 2px 2px 2px #ffffa0 !important;
         }
-
-        .mnavbar ul {
-            
-        }
-
-
-
 
         /* Home page */
         #maingrid{
