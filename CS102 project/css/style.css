@@ -54,6 +54,10 @@ body{
     transition: 0.2s ease;
 }
 
+.title span{
+    font-size: 8px;
+}
+
 .title a:hover{
     text-shadow: 4px 2px 2px #70ff66;
 }
@@ -341,6 +345,18 @@ footer{
         .mnavbar a:hover{
             background-color: #ffc53d !important;
             text-shadow: 2px 2px 2px #ffffa0 !important;
+        }
+
+
+        /* topbar */
+        .topbar{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 15px 5px 12px 0px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #70ff66;
+            box-shadow: 0 -3px 10px;
         }
 
         /* Home page */
