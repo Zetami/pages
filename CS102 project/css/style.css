@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 /* Color palette:
-   #70ff66 - light green
+   #70ff66 - neon green
    #d3ffd0 - pastel green
    #b9e2b7 - pastel green (darker)
    #ffffa0 - pastel yellow 
+   #ebeb7b - pastel yellow (darker)
    #ffc53d - orange */
 
 * {
     box-sizing: border-box;
     margin: 0;
+}
+
+.boxdec{
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0 , 0, 0.3);
 }
 
 body{
@@ -186,6 +192,7 @@ body{
     grid-template-rows: 2fr 1fr;
     background-color: #ffffa0;
     padding: 10px 10px;
+    border: 1px solid #ffc53d;
     border-radius: 3px;
 }
 
@@ -215,7 +222,7 @@ footer{
 /* match-ups page */
 
 #matchupwrapper{
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -258,6 +265,7 @@ footer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin-bottom: 9px;
 }
 
 #basicsnav a{
@@ -280,6 +288,57 @@ footer{
     background-color: #ffc53d;
     border-color: #ffffa0;
     box-shadow: 0 0 4px rgba(0, 0 , 0, 1);
+}
+
+#basics_layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 10px 2vw;
+}
+
+#pro_con_table{
+    display: flex;
+    border: 2px solid #ffffa0;
+    background: #ffc53d;
+    min-width: 300px;
+}
+
+#pro_con_table th{
+    background-color: #ffc53d;
+    border: 1px solid #ffffa0;
+    width: 50%;
+}
+
+#pro_con_table td{
+    background-color: #ffffa0;
+}
+
+#pro_con_table ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+}
+
+#pro_con_table li{
+    padding: 0 5px;
+}
+
+#pro_con_table li:nth-of-type(2n){
+    background-color: #ebeb7b;
+}
+
+.character_box{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffa0;
+    border: 2px solid #ffc53d;
+}
+
+.character_box img{
+    width: 100%;
+    max-width: 300px;
 }
 
 /* Medium screen */
@@ -412,7 +471,7 @@ footer{
     
         /* Matchup page */
         #matchupwrapper{
-            width: 90%;
+            width: 95%;
         margin: 0 auto;
         }
 
@@ -427,6 +486,14 @@ footer{
         #basicsnav{
             display: none;
         }
+
+
+        #basics_layout{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
     }
 
 }
