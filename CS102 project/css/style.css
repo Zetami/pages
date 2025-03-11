@@ -6,7 +6,9 @@
    #b9e2b7 - pastel green (darker)
    #ffffa0 - pastel yellow 
    #ebeb7b - pastel yellow (darker)
-   #ffc53d - orange */
+   #ffc53d - orange 
+   #f1af32 - orange (darker)
+   */
 
 * {
     box-sizing: border-box;
@@ -98,9 +100,9 @@ body{
     padding: 0;
     background-color: #b9e2b7;
     border-top: 0;
-    border-left: 3px;
-    border-right: 3px;
-    border-bottom: 3px;
+    border-left: 2px;
+    border-right: 2px;
+    border-bottom: 2px;
     border-color: #70ff66;
     border-style: solid;
     border-radius: 5px;
@@ -336,9 +338,58 @@ footer{
     border: 2px solid #ffc53d;
 }
 
+.character_box > div{
+    border-bottom: 2px solid #ffc53d;
+}
+
 .character_box img{
+    display: block;
     width: 100%;
-    max-width: 300px;
+    width: 280px;
+    max-height: 280px;
+    object-fit: contain;
+    padding: 10px 0;
+}
+
+#costume_current{
+    position: relative;
+    top: -280px;
+    margin-bottom: -280px;
+}
+
+#costume_current_shadow{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-out;
+}
+
+.costume_box > a{
+    padding-left: 1em;
+}
+
+.costumes{
+    display: grid;
+    gap: 4px;
+    margin: 4px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.costumes a{
+    font-size: 14px;
+    background-color: #ffc53d;
+    padding: 3px 5px 3px 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(0, 0 , 0, 0.3);
+    border: 1px solid #ffffa0;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.costumes a:hover{
+    background-color: #f1af32;
+    border-color: #ebeb7b;
+    box-shadow: 0 0 2px rgba(0, 0 , 0, 0.5);
 }
 
 /* Medium screen */
@@ -366,7 +417,7 @@ footer{
 
         #hamburger{
             display: block;
-            padding: 6px 12px;
+            padding: 6px 14px;
             font-size: 18px;
             transition: 0.3s ease;
             background-color: #ffffa0;
@@ -389,6 +440,7 @@ footer{
             left: 0;
             right: 0;
             text-align: center;
+            box-shadow: 0 5px 4px rgba(0, 0 , 0, 0.3);
         }
 
         .mnavbar > ul{
