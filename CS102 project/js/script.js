@@ -1,4 +1,4 @@
-
+// JavaScript
 var mtopicsflag = 0;
 document.getElementById("mobilenav").classList.add("hideburger");
 document.getElementById("mtopicsDrop").classList.add("hidetopics");

@@ -85,6 +85,10 @@ body{
     cursor: pointer;
 }
 
+.topicsDropdown{
+    z-index: 1;
+}
+
 .topicsDropdown ul{
     display: none;
     padding: 0;
@@ -355,6 +359,7 @@ footer{
     position: relative;
     top: -280px;
     margin-bottom: -280px;
+    z-index: 0;
 }
 
 #costume_current_shadow{
@@ -362,6 +367,7 @@ footer{
     bottom: 0;
     left: 0;
     transition: 0.5s ease-out;
+    z-index: 0;
 }
 
 .costume_box > a{
@@ -448,6 +454,10 @@ footer{
             display: flex;
             flex-direction: column;
             padding: 0;
+        }
+
+        .mnavbar{
+            z-index: 1;
         }
 
         .mtopicsDropdown ul{
