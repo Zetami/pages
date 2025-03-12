@@ -92,5 +92,13 @@ $(document).ready(function() {
         $("#costume_current_shadow").css("transform", "translate(10px, -5px)");
     }
     
+    // match-up search bar
+    $("#searchMU").on("keyup", function(){
+        var input = $(this).val().toUpperCase();
+        $("#matchupgrid .matchupbox").filter(function(){
+            $(this).toggle($(this).text().toUpperCase().indexOf(input) != -1)
+        })
+    });
+
   });
   
