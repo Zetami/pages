@@ -26,6 +26,8 @@ function mtopicsDrop(){
     }
 }
 
+
+
 // JQuery
 $(document).ready(function() {
     // BASICS COSTUME SWAPS
@@ -92,12 +94,31 @@ $(document).ready(function() {
         $("#costume_current_shadow").css("transform", "translate(10px, -5px)");
     }
     
+    // match-ups page
+
     // match-up search bar
     $("#searchMU").on("keyup", function(){
         var input = $(this).val().toUpperCase();
         $("#matchupgrid .matchupbox").filter(function(){
             $(this).toggle($(this).text().toUpperCase().indexOf(input) != -1)
         })
+    });
+
+    // character zoom effect
+    $(".matchupbox").mouseenter(function(){
+        $(this).children("a").toggleClass("matchup_sel", true);
+    });
+
+    $(".matchupbox").mouseleave(function(){
+        $(this).children("a").toggleClass("matchup_sel", false);
+    });
+
+    // charts page
+
+    // charts image buttons
+    $(".chart_btn").click(function(){
+        $(this).toggleClass("chart_btn_sel");
+        $(this).parent().children("img").toggle(400);
     });
 
   });

@@ -1,5 +1,44 @@
-.bowser_jr{
-    display: flex;
-    background-image: url(../images/characters/Bowser_Jr.webp);
+.banjo_and_kazooie{
+    background-image: url(../images/characters/Banjo_and_Kazooie.webp);
+    background-size: 25vw;
     background-repeat: no-repeat;
+    background-position: 50% 30%;
+    transition: background-size 0.3s ease-out;
 }
+
+.bayonetta{
+    background-image: url(../images/characters/Bayonetta.webp);
+    background-size: 25vw;
+    background-repeat: no-repeat;
+    background-position: 50% 5%;
+    transition: background-size 0.3s ease-out;
+}
+
+.bowser{
+    background-image: url(../images/characters/Bowser.webp);
+    background-size: 25vw;
+    background-repeat: no-repeat;
+    background-position: 50% 45%;
+    transition: background-size 0.3s ease-out;
+}
+
+.bowser_jr{
+    background-image: url(../images/characters/Bowser_Jr.webp);
+    background-size: 25vw;
+    background-repeat: no-repeat;
+    background-position: 50% 15%;
+    transition: background-size 0.3s ease-out;
+}
+
+.mii_swordfighter{
+    background-image: url(../images/characters/Mii_Swordfighter.webp);
+    background-size: 25vw;
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    transition: background-size 0.3s ease-out;
+}
+
+.matchup_sel{
+    background-size: 35vw;
+}
+

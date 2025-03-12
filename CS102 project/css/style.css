@@ -2,7 +2,7 @@
 
 /* Color palette:
    #70ff66 - neon green
-   #d3ffd0 - pastel green
+   #deffe5 - pastel green
    #b9e2b7 - pastel green (darker)
    #ffffa0 - pastel yellow 
    #ebeb7b - pastel yellow (darker)
@@ -13,6 +13,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 .boxdec{
@@ -25,6 +26,10 @@
     justify-content: space-around;
 }
 
+.hidebox{
+    display: none;
+}
+
 input{
     font-family: inherit;
 }
@@ -32,6 +37,7 @@ input{
 body{
     font-family: nunito, sans-serif;
     background: #b9e2b7;
+    margin-bottom: 100px;
 }
 
 #wrapper{
@@ -49,7 +55,7 @@ body{
 
 /* topbar, title, navbar */
 .topbar{
-    background-color: #b9e2b7;
+    background: radial-gradient(at 50% bottom, #b9e2b7, #deffe5);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -130,11 +136,6 @@ body{
     border-color: #ffffa0;
 }
 
-.topicsDropdown ul li a:hover{
-    background-color: #ffc53d;
-    border-color: #ffffa0;
-}
-
 .navbar a{
     text-decoration: none;
     text-align: center;
@@ -154,6 +155,7 @@ body{
 .navbar a:hover{
     background-color: #ffc53d;
     border-color: #ffffa0;
+    text-shadow: 2px 2px 2px #ffffa0;
     box-shadow: 0 0 4px rgba(0, 0 , 0, 1);
 }
 
@@ -190,6 +192,7 @@ body{
 .topicbox:hover{
     background-color: #ffc53d;
     border-color: #ffffa0;
+    text-shadow: 2px 2px 2px #ffffa0;
     box-shadow: 0 0 4px rgba(0, 0 , 0, 0.5);
 }
 
@@ -261,6 +264,7 @@ footer{
 }
 
 #matchupwrapper{
+    justify-items: center;
     width: 90%;
     margin: 0 auto;
 }
@@ -269,31 +273,43 @@ footer{
 #matchupgrid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 90%;
     gap: 10px 3%;
 }
 
 .matchupbox{
     display: flex;
     flex-direction: column;
-    background-color: #ffffa0;
+    background: radial-gradient(#ffffa0, #111);
+    background-size: 110% 110%;
+    background-position: 50%;
+    background-repeat: no-repeat;
     margin: auto 0;
     text-align: center;
     border: 1px solid #ffc53d;
     border-radius: 3px;
-    box-shadow: 0 0 4px rgba(0, 0 , 0, 0.2);
+    box-shadow: 0 0 4px rgba(0, 0 , 0, 0.3);
     transition: 0.1s ease;
 }
 
 .matchupbox:hover{
-    background-color: #ffc53d;
+    background: radial-gradient(#ffc53d, #000);
+    background-size: 100% 100%;
+    background-position: 50%;
+    background-repeat: no-repeat;
     border-color: #ffffa0;
-    box-shadow: 0 0 4px rgba(0, 0 , 0, 0.5);
+    text-shadow: 2px 2px 2px #ffffa0;
+    box-shadow: 0 0 4px rgba(0, 0 , 0, 0.8);
 }
 
 .matchupbox a{
-    color: #000000;
-    font-weight: 800;
+    color: #ffffff;
+    font-size: 2vw;
+    font-weight: 600;
     text-decoration: none;
+    text-shadow: 2px 0px 5px #222222, -2px 0px 5px #222222, 0px 2px 5px #222222, 0px -2px 5px #222222;
+    height: 15vw;
+    min-height: 100px;
 }
 
 .matchupbox img{
@@ -327,6 +343,7 @@ footer{
 #basicsnav a:hover{
     background-color: #ffc53d;
     border-color: #ffffa0;
+    text-shadow: 2px 2px 2px #ffffa0;
     box-shadow: 0 0 4px rgba(0, 0 , 0, 1);
 }
 
@@ -489,6 +506,53 @@ footer{
 #about_resources a:hover{
     background-color: #f1af32;
     border-color: #ebeb7b;
+    text-shadow: 2px 2px 2px #ffffa0;
+    box-shadow: 0 0 4px rgba(0, 0 , 0, 0.5);
+}
+
+/* charts page */
+#charts_layout{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+}
+
+.chart_box{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1em;
+}
+
+.chart_btn{
+    width: 70%;
+    background-color: #ffffa0;
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid #ffc53d;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 4px rgba(0, 0 , 0, 0.3);
+    transition: 0.1s ease;
+}
+
+.chart_btn:hover{
+    background-color: #f1af32;
+    border-color: #ebeb7b;
+    text-shadow: 2px 2px 2px #ffffa0;
+    box-shadow: 0 0 4px rgba(0, 0 , 0, 0.5);
+}
+
+.chart_btn_sel{
+    background-color: #f1af32;
+    border-color: #ebeb7b;
+    box-shadow: 0 0 4px rgba(0, 0 , 0, 0.5);
+}
+
+.chart_box img{
+    width: 100%;
+    border: 2px solid #ffc53d;
+    border-radius: 5px;
     box-shadow: 0 0 4px rgba(0, 0 , 0, 0.5);
 }
 
